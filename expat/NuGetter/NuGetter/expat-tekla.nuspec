@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>expat-tekla</id>
+    <version>0.0.0-localbuild</version>
+    <authors>James Clark, Clark Cooper, Fred Drake</authors>
+    <licenseUrl>https://libexpat.github.io/</licenseUrl>
+    <projectUrl>https://libexpat.github.io/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The native expat XML parser (x64, v142, Release/DebugCRT).</description>
+    <title>Expat (Tekla build)</title>
+    <tags>expat  native</tags>
+  </metadata>
+  <files>
+    <file src="expat-tekla.targets" target="\build\native\" />
+
+    <file src="..\Include\*.h" target="\build\native\include\" />
+
+    <file src="..\x64\Release\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\" />
+    <file src="..\x64\DebugCRT\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\DebugCRT\" />
+  </files>
+</package>
