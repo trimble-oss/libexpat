@@ -14,28 +14,27 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\Include\expat.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\Include\expat_external.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)ascii.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)asciitab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\ascii.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\asciitab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\expat.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\expat_external.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\iasciitab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\internal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\latin1tab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\nametab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\siphash.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\utf8tab.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\winconfig.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\xmlrole.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok_impl.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)expat_config.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)iasciitab.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)internal.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)latin1tab.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)macconfig.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)nametab.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)siphash.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)utf8tab.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)winconfig.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)xmlrole.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)xmltok.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)xmltok_impl.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)xmlparse.c" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)xmlrole.c" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)xmltok.c" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)xmltok_impl.c" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)xmltok_ns.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmlparse.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmlrole.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok_impl.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok_ns.c" />
   </ItemGroup>
 </Project>
