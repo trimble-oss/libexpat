@@ -14,7 +14,8 @@
   <files>
     <file src="expat-tekla.targets" target="\build\native\" />
 
-    <file src="..\Include\*.h" target="\build\native\include\" />
+    <file src="..\..\lib\expat.h" target="\build\native\include\" />
+    <file src="..\..\lib\expat_external.h" target="\build\native\include\" />
 
     <file src="..\x64\Release\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\" />
     <file src="..\x64\DebugCRT\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\DebugCRT\" />
