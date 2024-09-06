@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34301.259
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Expat.Shared", "Expat.Shared\Expat.Shared.vcxitems", "{ADAA320E-9A19-4726-9AAB-075C867172AD}"
 EndProject
@@ -15,38 +15,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nugetter", "Nugetter", "{9B
 		NuGetter\ver.txt = NuGetter\ver.txt
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Expat.Static.VS2015", "Expat.Static.VS2015\Expat.Static.VS2015.vcxproj", "{A559C706-91D9-4E20-84A2-02E3C3EA7A74}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Expat.Shared\Expat.Shared.vcxitems*{8de9849b-dfc0-4a9c-946e-74f0035f321f}*SharedItemsImports = 4
-		Expat.Shared\Expat.Shared.vcxitems*{a559c706-91d9-4e20-84a2-02e3c3ea7a74}*SharedItemsImports = 4
-		Expat.Shared\Expat.Shared.vcxitems*{adaa320e-9a19-4726-9aab-075c867172ad}*SharedItemsImports = 9
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Debug|x64.ActiveCfg = DebugCRT|x64
 		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Debug|x64.Build.0 = DebugCRT|x64
-		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Debug|x86.ActiveCfg = DebugCRT|x64
-		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Debug|x86.Build.0 = DebugCRT|x64
 		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Release|x64.ActiveCfg = Release|x64
 		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Release|x64.Build.0 = Release|x64
-		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Release|x86.ActiveCfg = Release|x64
-		{8DE9849B-DFC0-4A9C-946E-74F0035F321F}.Release|x86.Build.0 = Release|x64
-		{A559C706-91D9-4E20-84A2-02E3C3EA7A74}.Debug|x64.ActiveCfg = DebugCRT|x64
-		{A559C706-91D9-4E20-84A2-02E3C3EA7A74}.Debug|x86.ActiveCfg = DebugCRT|x64
-		{A559C706-91D9-4E20-84A2-02E3C3EA7A74}.Release|x64.ActiveCfg = Release|x64
-		{A559C706-91D9-4E20-84A2-02E3C3EA7A74}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A57DEDC-7A4E-486B-8C77-9023CCDC579F}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Expat.Shared\Expat.Shared.vcxitems*{8de9849b-dfc0-4a9c-946e-74f0035f321f}*SharedItemsImports = 4
+		Expat.Shared\Expat.Shared.vcxitems*{adaa320e-9a19-4726-9aab-075c867172ad}*SharedItemsImports = 9
 	EndGlobalSection
 EndGlobal
