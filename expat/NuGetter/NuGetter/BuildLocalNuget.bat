@@ -8,3 +8,5 @@ echo %Build% >ver.txt
 
 c:/work/nuget.exe pack -Version 2.4.8.%Build% Expat-tekla.nuspec
 
+echo - Sign TS used Nugets by downloading and running signing script from Artifactory
+echo - Upload signed Nugets to Artifactory/Technology feed
