@@ -6,7 +6,7 @@ set /p Build=<ver.txt
 set /a Build+=1
 echo %Build% >ver.txt
 
-c:/work/nuget.exe pack -Version 2.4.8.%Build% Expat-tekla.nuspec
+c:/work/nuget.exe pack -Version 2.7.3.%Build% Expat-tekla.nuspec
 
 echo - Sign TS used Nugets by downloading and running signing script from Artifactory
 echo - Upload signed Nugets to Artifactory/Technology feed

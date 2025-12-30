@@ -9,3 +9,6 @@
 
 /* Windows has memmove() available. */
 #define HAVE_MEMMOVE
+
+// Expat will parse and expand general entities.
+#define XML_GE 1
