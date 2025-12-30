@@ -6363,6 +6363,7 @@ processEntity(XML_Parser parser, ENTITY *entity, XML_Bool betweenDecl,
   default:
     // Should not reach here
     assert(0);
+    return XML_ERROR_UNEXPECTED_STATE; // as assert is not in release, return failure properly.
     /* LCOV_EXCL_STOP */
   }
 
