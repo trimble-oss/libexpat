@@ -74,5 +74,8 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok_ns.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\random_rand_s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

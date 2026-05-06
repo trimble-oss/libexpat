@@ -31,6 +31,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)expat_config.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\random_rand_s.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmlparse.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmlrole.c" />
     <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\xmltok.c" />
