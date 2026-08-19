@@ -5,8 +5,7 @@
 #                      \___/_/\_\ .__/ \__,_|\__|
 #                               |_| XML parser
 #
-# Copyright (c) 2021-2026 Sebastian Pipping <sebastian@pipping.org>
-# Copyright (c) 2023      Joyce Brum <joycebrum@google.com>
+# Copyright (c) 2026 Expat development team
 # Licensed under the MIT license:
 #
 # Permission is  hereby granted,  free of charge,  to any  person obtaining
@@ -28,41 +27,11 @@
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 # USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-name: Enforce clang-tidy clean code
+set(CMAKE_SYSTEM_NAME Windows)
 
-on:
-  pull_request:
-  push:
-  schedule:
-    - cron: '0 2 * * 5'  # Every Friday at 2am
-  workflow_dispatch:
+set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
+set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
+set(CMAKE_RC_COMPILER x86_64-w64-mingw32-windres)
 
-permissions:
-  contents: read
-
-jobs:
-  clang_tidy:
-    name: Enforce clang-tidy clean code
-    timeout-minutes: 15
-    runs-on: ubuntu-24.04
-    steps:
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-      with:
-        persist-credentials: false
-
-    - name: Install clang-tidy 22
-      run: |-
-        set -x
-        source /etc/os-release
-        wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-        sudo add-apt-repository "deb https://apt.llvm.org/${UBUNTU_CODENAME}/ llvm-toolchain-${UBUNTU_CODENAME}-22 main"
-        sudo apt-get update  # due to new repository
-        sudo timeout 10m apt-get install --yes --no-install-recommends -V \
-            clang-tidy-22
-        echo /usr/lib/llvm-22/bin >>"${GITHUB_PATH}"
-
-    - name: Run clang-tidy
-      run: |
-        set -x
-        cd expat/
-        ./apply-clang-tidy.sh
+set(WIN32 ON)
+set(MINGW ON)

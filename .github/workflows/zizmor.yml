@@ -5,8 +5,7 @@
 #                      \___/_/\_\ .__/ \__,_|\__|
 #                               |_| XML parser
 #
-# Copyright (c) 2025-2026 Sebastian Pipping <sebastian@pipping.org>
-# Copyright (c) 2025      Atrem Borovik <polzovatellllk@gmail.com>
+# Copyright (c) 2026 Sebastian Pipping <sebastian@pipping.org>
 # Licensed under the MIT license:
 #
 # Permission is  hereby granted,  free of charge,  to any  person obtaining
@@ -28,11 +27,11 @@
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 # USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-name: Build with WASI SDK
+name: Enforce GitHub Actions security via zizmor
 
 on:
-  pull_request:
   push:
+  pull_request:
   schedule:
     - cron: '0 2 * * 5'  # Every Friday at 2am
   workflow_dispatch:
@@ -41,34 +40,14 @@ permissions:
   contents: read
 
 jobs:
-  wasi_sdk:
-    name: Build with WASI SDK
-    timeout-minutes: 15
-    runs-on: ubuntu-22.04
+  zizmor:
+    name: Enforce GitHub Actions security via zizmor
+    runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-      with:
-        persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
 
-    - name: Install build dependencies
-      env:
-        wasi_sdk_major: "33"
-        wasi_sdk_minor: "0"
-      run: |-
-        set -x -u
-        wget "https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-${wasi_sdk_major}/wasi-sdk-${wasi_sdk_major}.${wasi_sdk_minor}-x86_64-linux.deb"
-        sudo timeout 10m apt-get install --yes "./wasi-sdk-${wasi_sdk_major}.${wasi_sdk_minor}-x86_64-linux.deb"
-
-    - name: Build using WASI SDK
-      run: |
-        cmake_args=(
-          -DCMAKE_TOOLCHAIN_FILE=/opt/wasi-sdk/share/cmake/wasi-sdk-p1.cmake
-          -DCMAKE_{C,CXX}_FLAGS='-O2 -pipe -Wall -Wextra -pedantic -Wno-overlength-strings'
-          -DEXPAT_BUILD_DOCS=OFF
-          -DEXPAT_BUILD_TESTS=OFF
-          -DEXPAT_SHARED_LIBS=OFF
-          -DEXPAT_WARNINGS_AS_ERRORS=ON
-        )
-        set -x
-        cmake "${cmake_args[@]}" -S expat/ -B build/
-        make -C build -j$(nproc) VERBOSE=1 all
+      - uses: zizmorcore/zizmor-action@3dc1ecc9bcb9e94e9b2c709687979e1298497054  # v0.6.2
+        with:
+          advanced-security: false
