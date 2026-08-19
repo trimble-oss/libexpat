@@ -19,5 +19,7 @@
 
     <file src="..\x64\Release\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\" />
     <file src="..\x64\DebugCRT\Expat.Static.VS2019.lib" target="\build\native\lib\x64\v142\DebugCRT\" />
+
+    <file src="..\..\COPYING" target=".\COPYING" />
   </files>
 </package>
